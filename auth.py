@@ -1,5 +1,6 @@
 def login(username, password):
-    # simple login check
-    if username == "admin" and password == "1234":
+    # authentication logic with hashing (resolved version)
+    hashed = hash_password(password)
+    if username == "admin" and hashed == HASHED_ADMIN_PW:
         return True
     return False
